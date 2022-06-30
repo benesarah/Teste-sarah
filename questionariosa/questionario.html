@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=q">
+    <title>Questionário</title>
+    <link rel="stylesheet" href="estil.css">
+    <script>
+        function calcularNota(){
+            var certas = 0;
+            //verificar se acertou a primeira
+            var opcaoP1 = document.getElementById("p1Correta").checked;
+            if (opcaoP1==true) { certas++; }
+
+            var opcaoP2 = document.getElementById("p2Correta").checked;
+            if (opcaoP2==true) { certas++; }
+
+            var opcaoP3 = document.getElementById("p3Correta").checked;
+            if (opcaoP3==true) { certas++; }
+
+            var opcaoP4 = document.getElementById("p4Correta").checked;
+            if (opcaoP4==true) { certas++; }
+
+            var opcaoP5 = document.getElementById("p5Correta").checked;
+            if (opcaoP5==true) { certas++; }
+
+            document.getElementById("nota").innerHTML = (certas * 20);
+        }
+    </script>
+</head>
+<body>
+
+    <div id="tudo">
+    
+<h1>Questionário sobre Capitais</h1>
+<h2>1. Qual a capital do Chile</h2>
+<p><input  type="radio" name="pergunta1">La Paz</p>
+<p><input  type="radio" name="pergunta1">Lima</p>
+<p><input  type="radio" name="pergunta1">Caracas</p>
+<p><input  type="radio" id="p1Correta" name="pergunta1">Santiago</p>
+<p><input  type="radio" name="pergunta1">Quito</p>
+
+<h2>2. Qual a capital de Cuba</h2>
+<p><input  type="radio" name="pergunta2">San jose</p>
+<p><input  type="radio" name="pergunta2">Nassau</p>
+<p><input  type="radio" id="p2Correta" name="pergunta2">Havana</p>
+<p><input  type="radio" name="pergunta2">Santiago</p>
+<p><input  type="radio" name="pergunta2">Quito</p>
+
+<h2>3. Qual a capital de Bélgica</h2>
+<p><input  type="radio" name="pergunta3">Sófia</p>
+<p><input  type="radio" name="pergunta3">Zagred</p>
+<p><input  type="radio" name="pergunta3">Baku</p>
+<p><input  type="radio" name="pergunta3">Tirana</p>
+<p><input  type="radio" id="p3Correta" name="pergunta3">Bruxelas</p>
+
+
+<h2>4. Qual a capital da Croácia</h2>
+<p><input  type="radio" id="p4Correta" name="pergunta4">Zagreb</p>
+<p><input  type="radio" name="pergunta4">Madri</p>
+<p><input  type="radio" name="pergunta4">Baku</p>
+<p><input  type="radio" name="pergunta4">Viena</p>
+<p><input  type="radio" name="pergunta4">Berlin</p>
+
+
+<h2>5. Qual a capital de Noruega</h2>
+<p><input  type="radio" name="pergunta5">Vaduz</p>
+<p><input  type="radio" name="pergunta5">Praga</p>
+<p><input  type="radio" name="pergunta5">Baku</p>
+<p><input  type="radio" id="p5Correta" name="pergunta5">Oslo</p>
+<p><input  type="radio" name="pergunta5">Bucareste</p>
+
+
+<input type="button" value="concluir" onclick="calcularNota()">
+<p><strong>Nota Final:</strong> <span id="nota">?</span></p>
+</div>
+</body>
+</html>

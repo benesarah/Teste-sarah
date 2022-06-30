@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(218, 198, 149);
+}
+
+#tudo{
+    height: 1300px;
+    width: 800px;
+    margin-left: 250px;
+    background-color: rgb(196, 172, 114);
+
+}
+
+h1{
+    margin-left: 200px;
+}
